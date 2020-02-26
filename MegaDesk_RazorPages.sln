@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk_RazorPages", "MegaDesk_RazorPages.csproj", "{042F36FA-800F-46F7-9778-C19371538735}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{042F36FA-800F-46F7-9778-C19371538735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042F36FA-800F-46F7-9778-C19371538735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042F36FA-800F-46F7-9778-C19371538735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042F36FA-800F-46F7-9778-C19371538735}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C500BD2-B7EF-451B-8095-6586B45DC5E2}
+	EndGlobalSection
+EndGlobal

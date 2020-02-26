@@ -1,0 +1,67 @@
+﻿@page
+@model MegaDesk_RazorPages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Desk</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Width)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Width)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Depth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Depth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Material)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Material)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Drawers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Drawers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Order)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Order)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.DateOrder)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.DateOrder)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Desk.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
