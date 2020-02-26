@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using MegaDesk_RazorPages.Data;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MegaDesk_RazorPages
 {
@@ -29,6 +31,19 @@ namespace MegaDesk_RazorPages
 
             services.AddDbContext<MegaDesk_RazorPagesContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MegaDesk_RazorPagesContext")));
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddDbContext<MegaDesk_RazorPagesContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MegaDeskRazorContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

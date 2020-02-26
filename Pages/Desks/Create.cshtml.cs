@@ -12,6 +12,8 @@ namespace MegaDesk_RazorPages
 {
     public class CreateModel : PageModel
     {
+       
+       
         private readonly MegaDesk_RazorPages.Data.MegaDesk_RazorPagesContext _context;
 
         public CreateModel(MegaDesk_RazorPages.Data.MegaDesk_RazorPagesContext context)
@@ -36,10 +38,22 @@ namespace MegaDesk_RazorPages
                 return Page();
             }
 
+            
+            Desk.DateOrder = DateTime.Today;
+          //***************************************************************************************
+
+                            //ADD code to calculate the final price
+
+          //**************************************************************************************
             _context.Desk.Add(Desk);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./View");
         }
     }
+    public class Calculate
+    {
+        
+    }
+   
 }

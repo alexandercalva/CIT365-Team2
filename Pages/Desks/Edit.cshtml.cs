@@ -48,6 +48,9 @@ namespace MegaDesk_RazorPages
                 return Page();
             }
 
+            var widthForm = int.Parse(Request.Form["width"]);
+            Desk.Width = widthForm;
+            Desk.Price = widthForm;
             _context.Attach(Desk).State = EntityState.Modified;
 
             try
@@ -66,7 +69,7 @@ namespace MegaDesk_RazorPages
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./View");
         }
 
         private bool DeskExists(int id)

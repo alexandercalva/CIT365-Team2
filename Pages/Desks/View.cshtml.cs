@@ -25,5 +25,6 @@ namespace MegaDesk_RazorPages
         {
             Desk = await _context.Desk.ToListAsync();
         }
+       
     }
 }

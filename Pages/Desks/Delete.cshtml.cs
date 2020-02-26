@@ -53,7 +53,7 @@ namespace MegaDesk_RazorPages
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./View");
         }
     }
 }

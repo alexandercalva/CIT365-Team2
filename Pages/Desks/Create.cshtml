@@ -1,8 +1,11 @@
 ﻿@page
-@model MegaDesk_RazorPages.CreateModel
+@model MegaDesk_RazorPages.CreateModel 
 
 @{
+    
     ViewData["Title"] = "Create";
+    var DateNow = DateTime.Today;
+   
 }
 
 
@@ -11,7 +14,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="POST">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Desk.Name" class="control-label"></label>
@@ -20,39 +23,43 @@
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Width" class="control-label"></label>
-                <input asp-for="Desk.Width" class="form-control" />
-                <span asp-validation-for="Desk.Width" class="text-danger"></span>
+                <input asp-for="Desk.Width" class="form-control" name ="width"/>
+                <span asp-validation-for="Desk.Width" name ="width" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Depth" class="control-label"></label>
-                <input asp-for="Desk.Depth" class="form-control" />
+                <input asp-for="Desk.Depth" name ="depth" class="form-control" />
                 <span asp-validation-for="Desk.Depth" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Material" class="control-label"></label>
-                <input asp-for="Desk.Material" class="form-control" />
+                <select asp-for="Desk.Material" name ="material" class="form-control" />
+                <option value="Laminate">Laminate </option>
+                <option value="Oak">Oak </option>
+                <option value="Pine">Pine</option>
+                <option value="Rosewood">Rosewood </option>
+                <option value="Veneer">Veneer <</option>
+
+                </select>
                 <span asp-validation-for="Desk.Material" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Drawers" class="control-label"></label>
-                <input asp-for="Desk.Drawers" class="form-control" />
+                <input asp-for="Desk.Drawers" name ="drawers" class="form-control" />
                 <span asp-validation-for="Desk.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Order" class="control-label"></label>
-                <input asp-for="Desk.Order" class="form-control" />
+                <select asp-for="Desk.Order" name ="order" class="form-control" />
+                    <option value="14">14 </option>
+                    <option value="3">3 </option>
+                    <option value="5">5 </option>
+                    <option value="7">7</option>
+                </select>
                 <span asp-validation-for="Desk.Order" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.DateOrder" class="control-label"></label>
-                <input asp-for="Desk.DateOrder" class="form-control" />
-                <span asp-validation-for="Desk.DateOrder" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Desk.Price" class="control-label"></label>
-                <input asp-for="Desk.Price" class="form-control" />
-                <span asp-validation-for="Desk.Price" class="text-danger"></span>
-            </div>
+            
+            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
