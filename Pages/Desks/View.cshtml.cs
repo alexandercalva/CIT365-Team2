@@ -25,14 +25,12 @@ namespace MegaDesk_RazorPages
         public string SearchMaterial { get; set; }
         public string SortItems { get; set; }
 
-
         public IList<Desk> Desk { get; set; }
         public async Task OnGetAsync(int? page, string sortOrder, string searchName, string filterName, string searchMaterial, string filterMaterial)
         {
             SortItems = sortOrder;
             SortByName = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             SortByDate = sortOrder == "dateOrder" ? "dateOrder_desc" : "dateOrder";
-
 
             if (searchName != null || searchMaterial != null)
             {
