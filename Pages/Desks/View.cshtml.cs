@@ -19,8 +19,8 @@ namespace MegaDesk_RazorPages
             _context = context;
         }
 
-        public string SortName { get; set; }
-        public string SortMaterial { get; set; }
+        public string SortByName { get; set; }
+        public string SortByDate { get; set; }
         public string SearchName { get; set; }
         public string SearchMaterial { get; set; }
         public string SortItems { get; set; }
@@ -30,8 +30,9 @@ namespace MegaDesk_RazorPages
         public async Task OnGetAsync(int? page, string sortOrder, string searchName, string filterName, string searchMaterial, string filterMaterial)
         {
             SortItems = sortOrder;
-            SortName = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            SortMaterial = sortOrder == "material" ? "material_desc" : "material";
+            SortByName = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            SortByDate = sortOrder == "dateOrder" ? "dateOrder_desc" : "dateOrder";
+
 
             if (searchName != null || searchMaterial != null)
             {
@@ -62,8 +63,8 @@ namespace MegaDesk_RazorPages
             {
                 "name_desc" => desks.OrderByDescending(s => s.Name),
                 "name" => desks.OrderBy(s => s.Name),
-                "material_desc" => desks.OrderByDescending(s => s.Material),
-                _ => desks.OrderBy(s => s.Material),
+                "dateOrder_desc" => desks.OrderByDescending(s => s.DateOrder),
+                _ => desks.OrderBy(s => s.DateOrder),
             };
             Desk = await desks.ToListAsync();
         }
