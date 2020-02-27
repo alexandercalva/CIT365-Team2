@@ -1,8 +1,24 @@
 ﻿@page
-@model MegaDesk_RazorPages.QuotesModel
+@model MegaDesk_RazorPages.IndexModel
 @{
     ViewData["Title"] = "Quotes";
 }
-    
-<h1>Quotes</h1>
 
+<h1>Quotes</h1>
+<div>
+    <p>Can't find Desk Quote? Create new Quote</p>
+    <p><a class="btn btn-primary" asp-page="/Desks/Create">Add New Quote</a></p>
+</div>
+
+<form class="form-inline" asp-page="/Desks/View" method="get">
+    <div class="form-group mr-2">
+        <label for="searchName">Search By Name:</label>
+        <input type="text" class="form-control ml-1" name="searchName" value="@Model.SearchName" />&nbsp;
+        <label for="searchMaterial">Search By Material:</label>
+        <input type="text" class="form-control ml-1" name="searchMaterial" value="@Model.SearchMaterial" />
+    </div>
+    <div class="btn-group">
+        <button type="submit" class="btn btn-outline-info mr-2">Search</button>
+        <a asp-page="/Desks/View" class="btn btn-outline-info">All Quotes</a>
+    </div>
+</form>

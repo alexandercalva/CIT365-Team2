@@ -19,12 +19,53 @@ namespace MegaDesk_RazorPages
             _context = context;
         }
 
-        public IList<Desk> Desk { get;set; }
+        public string SortName { get; set; }
+        public string SortMaterial { get; set; }
+        public string SearchName { get; set; }
+        public string SearchMaterial { get; set; }
+        public string SortItems { get; set; }
 
-        public async Task OnGetAsync()
+
+        public IList<Desk> Desk { get; set; }
+        public async Task OnGetAsync(int? page, string sortOrder, string searchName, string filterName, string searchMaterial, string filterMaterial)
         {
-            Desk = await _context.Desk.ToListAsync();
+            SortItems = sortOrder;
+            SortName = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            SortMaterial = sortOrder == "material" ? "material_desc" : "material";
+
+            if (searchName != null || searchMaterial != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchName = filterName;
+                searchMaterial = filterMaterial;
+            }
+
+            SearchName = searchName;
+            SearchMaterial = searchMaterial;
+
+            var desks = from m in _context.Desk
+                        select m;
+
+            if (!String.IsNullOrEmpty(searchName))
+            {
+                desks = desks.Where(s => s.Name.Contains(searchName));
+            }
+            if (!string.IsNullOrEmpty(searchMaterial))
+            {
+                desks = desks.Where(s => s.Material.Contains(searchMaterial));
+            }
+
+            desks = sortOrder switch
+            {
+                "name_desc" => desks.OrderByDescending(s => s.Name),
+                "name" => desks.OrderBy(s => s.Name),
+                "material_desc" => desks.OrderByDescending(s => s.Material),
+                _ => desks.OrderBy(s => s.Material),
+            };
+            Desk = await desks.ToListAsync();
         }
-       
     }
 }
