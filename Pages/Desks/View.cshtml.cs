@@ -22,28 +22,25 @@ namespace MegaDesk_RazorPages
         public string SortByName { get; set; }
         public string SortByDate { get; set; }
         public string SearchName { get; set; }
-        public string SearchMaterial { get; set; }
         public string SortItems { get; set; }
 
         public IList<Desk> Desk { get; set; }
-        public async Task OnGetAsync(int? page, string sortOrder, string searchName, string filterName, string searchMaterial, string filterMaterial)
+        public async Task OnGetAsync(int? page, string sortOrder, string searchName, string filterName)
         {
             SortItems = sortOrder;
             SortByName = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             SortByDate = sortOrder == "dateOrder" ? "dateOrder_desc" : "dateOrder";
 
-            if (searchName != null || searchMaterial != null)
+            if (searchName != null)
             {
                 page = 1;
             }
             else
             {
                 searchName = filterName;
-                searchMaterial = filterMaterial;
             }
 
             SearchName = searchName;
-            SearchMaterial = searchMaterial;
 
             var desks = from m in _context.Desk
                         select m;
@@ -52,11 +49,6 @@ namespace MegaDesk_RazorPages
             {
                 desks = desks.Where(s => s.Name.Contains(searchName));
             }
-            if (!string.IsNullOrEmpty(searchMaterial))
-            {
-                desks = desks.Where(s => s.Material.Contains(searchMaterial));
-            }
-
             desks = sortOrder switch
             {
                 "name_desc" => desks.OrderByDescending(s => s.Name),
