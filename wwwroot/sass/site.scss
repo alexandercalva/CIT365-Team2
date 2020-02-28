@@ -8,6 +8,8 @@ $color2: #38AECC;
 $color3: #0090C1;
 $color4: #183446;
 $color5: #046E8F;
+@import 'partials/main-style';
+@import 'partials/select';
 @import 'partials/header';
 @import 'partials/main';
 
