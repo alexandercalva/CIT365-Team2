@@ -1,75 +1,82 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+@charset "UTF-8";
+/* Marbust Sites MBTC® Template 4 */
+/*Powerby Marbust Framework CSS 4.0*/
+@import url("marbust-framework.css");
+header {
+  position: fixed;
+  width: 100%;
+  max-height: 50px;
+  background: #022F40;
+  z-index: 3;
+  top: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+header .tittle-link {
+  padding: 10px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.5s;
+}
+header .tittle-link:hover {
+  color: #38AECC;
+  transform: scale(1.1) translateX(15px);
+}
+header .tittle-link, header .web-site-nav {
+  margin: 0px;
+}
+@media (max-width: 1000px) {
+  header {
+    max-height: 100px;
+  }
+  header .tittle-link {
+    text-align: center;
+  }
+  header .tittle-link:hover {
+    transform: scale(1.1) translateX(0px);
+  }
+}
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+@media (max-width: 1000px) {
+  header ul {
+    justify-content: center;
+  }
+  header ul li a span {
+    display: none;
+  }
+}
+header ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+header ul li a i {
+  transition: 0.5s;
+}
+header ul li a:hover {
+  background: #046E8F;
+}
+header ul li a:hover i {
+  transform: scale(1.1);
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+main {
+  margin-top: 50px;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+@media (max-width: 1000px) {
+  main {
+    margin-top: 100px;
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
-
+<<<<<<< HEAD
 
 
 
@@ -166,3 +173,6 @@ h2 {
 .select-box .option .radio {
     display: none;
 }
+=======
+/*# sourceMappingURL=site.css.map */
+>>>>>>> ddbf5c85247c8b483cdd8b8f9b86afa23145c1de
