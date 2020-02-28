@@ -3,6 +3,12 @@ body {
   max-width: 1500px;
   min-width: 300px;
   margin-left: auto;
+  margin-right: auto;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
 }
 
 /*# sourceMappingURL=site.css.map */
