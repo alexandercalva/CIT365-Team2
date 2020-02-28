@@ -4,26 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MegaDesk</title>
- <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
-   <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="">
-            <ul class="">
+    <header class="flex-s-b flex-m-hc">
+        <a class="tittle-link box-3 box-i-4 box-m-12 box-p-12" asp-page="/Index">MegaDesk</a>
+        <nav class="box-9 box-i-8 box-m-12 box-p-12 web-site-nav">
+            <ul>
                 <li>
-                    <a asp-area="" asp-page="/Index">Home</a>
+                    <a asp-area="" asp-page="/Index"><i class="fas fa-home"></i> <span>Home</span></a>
                 </li>
 
                 <li>
 
-                    <a asp-area="" asp-page="/Desks/Create">New</a>
+                    <a asp-area="" asp-page="/Desks/Create"><i class="fas fa-plus-circle"></i> <span>New</span></a>
                 </li>
                 <li>
-                    <a asp-area="" asp-page="/Desks/View">View</a>
+                    <a asp-area="" asp-page="/Desks/View"><i class="fas fa-list"></i> <span>View</span></a>
                 </li>
                 <li>
-                    <a asp-area="" asp-page="/Quotes">Search</a>
+                    <a asp-area="" asp-page="/Quotes"><i class="fas fa-search"></i> <span>Search</span></a>
                 </li>
             </ul>
         </nav>

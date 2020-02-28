@@ -1,14 +1,13 @@
-/* Design */
-body {
-    max-width: 1500px;
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* Marbust Sites MBTC® Template 4 */
+/*Powerby Marbust Framework CSS 4.0*/
+//@import url("https://framework.marbust.com/marbust-framework.css");
+@import url('marbust-framework.css');
 
-header {
-    ul {
-        display: flex;
-        list-style: none;
-    }
-}
+$color1: #022F40;
+$color2: #38AECC;
+$color3: #0090C1;
+$color4: #183446;
+$color5: #046E8F;
+@import 'partials/header';
+@import 'partials/main';
+

@@ -1,14 +1,79 @@
-/* Design */
-body {
-  max-width: 1500px;
-  min-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+@charset "UTF-8";
+/* Marbust Sites MBTC® Template 4 */
+/*Powerby Marbust Framework CSS 4.0*/
+@import url("marbust-framework.css");
+header {
+  position: fixed;
+  width: 100%;
+  max-height: 50px;
+  background: #022F40;
+  z-index: 3;
+  top: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
 }
-
+header .tittle-link {
+  padding: 10px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.5s;
+}
+header .tittle-link:hover {
+  color: #38AECC;
+  transform: scale(1.1) translateX(15px);
+}
+header .tittle-link, header .web-site-nav {
+  margin: 0px;
+}
+@media (max-width: 1000px) {
+  header {
+    max-height: 100px;
+  }
+  header .tittle-link {
+    text-align: center;
+  }
+  header .tittle-link:hover {
+    transform: scale(1.1) translateX(0px);
+  }
+}
 header ul {
   display: flex;
   list-style: none;
+  justify-content: flex-end;
+}
+@media (max-width: 1000px) {
+  header ul {
+    justify-content: center;
+  }
+  header ul li a span {
+    display: none;
+  }
+}
+header ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+header ul li a i {
+  transition: 0.5s;
+}
+header ul li a:hover {
+  background: #046E8F;
+}
+header ul li a:hover i {
+  transform: scale(1.1);
+}
+
+main {
+  margin-top: 50px;
+}
+@media (max-width: 1000px) {
+  main {
+    margin-top: 100px;
+  }
 }
 
 /*# sourceMappingURL=site.css.map */
