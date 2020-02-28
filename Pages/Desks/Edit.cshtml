@@ -26,22 +26,29 @@
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Depth" class="control-label"></label>
-                <input asp-for="Desk.Depth" class="form-control" />
+                <input asp-for="Desk.Depth" name="depth" class="form-control" />
                 <span asp-validation-for="Desk.Depth" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Desk.Material" class="control-label"></label>
-                <input asp-for="Desk.Material" class="form-control" />
-                <span asp-validation-for="Desk.Material" class="text-danger"></span>
+                <select asp-for="Desk.Material" name="material" class="form-control" />
+                <option style="background:url(~/images/venner.jpg);" value="Laminate"><span><img src="~/images/venner.jpg" /></span>Laminate </option>
+                <option value="Oak">Oak </option>
+                <option value="Pine">Pine</option>
+                <option value="Rosewood">Rosewood </option>
+                <option value="Veneer">Veneer </option>
+
+                <span asp-validation-for="Desk.Material" class="text-danger"></span>-->
+
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Drawers" class="control-label"></label>
-                <input asp-for="Desk.Drawers" class="form-control" />
+                <input asp-for="Desk.Drawers" name ="drawers" class="form-control" />
                 <span asp-validation-for="Desk.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Order" class="control-label"></label>
-                <input asp-for="Desk.Order" class="form-control" />
+                <input asp-for="Desk.Order" name="order" class="form-control" />
                 <span asp-validation-for="Desk.Order" class="text-danger"></span>
             </div>
             <div class="form-group">

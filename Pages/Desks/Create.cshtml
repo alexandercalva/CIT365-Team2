@@ -23,90 +23,96 @@
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Width" class="control-label"></label>
-                <input asp-for="Desk.Width" class="form-control" name ="width"/>
-                <span asp-validation-for="Desk.Width" name ="width" class="text-danger"></span>
+                <input asp-for="Desk.Width" class="form-control" name="width" />
+                <span asp-validation-for="Desk.Width" name="width" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Depth" class="control-label"></label>
-                <input asp-for="Desk.Depth" name ="depth" class="form-control" />
+                <input asp-for="Desk.Depth" name="depth" class="form-control" />
                 <span asp-validation-for="Desk.Depth" class="text-danger"></span>
             </div>
-            <div class="form-group">
-
-                <!--javascript dropdown options-->
-                <div class="container">
-
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input type="radio"
-                                       class="radio"
-                                       id="automobiles"
-                                       name="category" />
-                                <label for="automobiles"><img src="~/images/laminate.jpg" />Laminate</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="film" name="category" />
-                                <label for="film"><img src="~/images/oak.jpg" />Oak</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="science" name="category" />
-                                <label for="science"><img src="~/images/pine.jpg" />Pine</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="art" name="category" />
-                                <label for="art"><img src="~/images/rosewood.jpg" />rosewood</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="music" name="category" />
-                                <label for="music"><img src="~/images/venner.jpg" />Veneer</label>
-                            </div>
 
 
-                        </div>
+            <!--javascript dropdown options-->
+            <!-- <div class="container"> -->
 
-                        <div class="selected">
-                            Desk Surface Material:
-                        </div>
+            <div class="select-box">
+                <div class="options-container">
+
+                    <div class="option">
+
+                        <label asp-for="Desk.Material"><img src="~/images/laminate.jpg" />Laminate</label>
+                        <input name="material" class="radio" />
+                        
+
                     </div>
+
+                    <div class="option">
+                        <input asp-for="Desk.Material" class="radio" id="film" />
+                        <label asp-for="Desk.Material"><img src="~/images/oak.jpg" />Oak</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="science" name="material" />
+                        <label asp-for="Desk.Material"><img src="~/images/pine.jpg" />Pine</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="art" name="category" />
+                        <label asp-for="Desk.Material"><img src="~/images/rosewood.jpg" />rosewood</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="material"/>
+                        <label for="Desk.Material" name="material"><img src="~/images/venner.jpg" />Veneer</label>
+                    </div>
+
+                    <span asp-validation-for="Desk.Material" class="text-danger"></span>
+
                 </div>
 
-                <script src="~/js/main.js"></script>
-                <label asp-for="Desk.Material" class="control-label"></label>
-                <select asp-for="Desk.Material" name ="material" class="form-control" />
-                <option value="Laminate"><img src="~/images/rosewood.jpg" alt="rosewood" />Laminate </option>
-                <option value="Oak">Oak </option>
-                <option value="Pine">Pine</option>
-                <option value="Rosewood">Rosewood </option>
-                <option value="Veneer">Veneer </option>
-
-                <span asp-validation-for="Desk.Material" class="text-danger"></span>
+                <div class="selected">
+                    Desk Surface Material:
+                </div>
             </div>
+            <script src="~/js/main.js"></script>
+
+
+
+            <!--
+    <select asp-for="Desk.Material" name ="material" class="form-control" />
+    <option style="background:url(~/images/venner.jpg);" value="Laminate"><span><img src="~/images/venner.jpg" /></span>Laminate </option>
+    <option value="Oak">Oak </option>
+    <option value="Pine">Pine</option>
+    <option value="Rosewood">Rosewood </option>
+    <option value="Veneer">Veneer </option>
+
+    <span asp-validation-for="Desk.Material" class="text-danger"></span>-->
+            <!--</select> -->
+            <!--</div>-->
             <div class="form-group">
                 <label asp-for="Desk.Drawers" class="control-label"></label>
-                <input asp-for="Desk.Drawers" name ="drawers" class="form-control" />
+                <input asp-for="Desk.Drawers" name="drawers" class="form-control" />
                 <span asp-validation-for="Desk.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Order" class="control-label"></label>
-                <select asp-for="Desk.Order" name ="order" class="form-control" />
-                    <option value="14">14 </option>
-                    <option value="3">3 </option>
-                    <option value="5">5 </option>
-                    <option value="7">7</option>
+                <select asp-for="Desk.Order" name="order" class="form-control" />
+                <option value="14">14 </option>
+                <option value="3">3 </option>
+                <option value="5">5 </option>
+                <option value="7">7</option>
                 </select>
                 <span asp-validation-for="Desk.Order" class="text-danger"></span>
             </div>
-            
-            
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
         </form>
+       
     </div>
 </div>
 
