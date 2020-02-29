@@ -53,15 +53,15 @@ namespace MegaDesk_RazorPages
            Desk.Material = material;
            
             // Materials
-            if (Desk.Material == "Laminate")
+            if (material == "Laminate")
                 materials = 100;
-            else if (Desk.Material == "Oak")
+            else if (material == "Oak")
                 materials = 200;
-            else if (Desk.Material == "Pine")
+            else if (material == "Pine")
                 materials = 50;
-            else if (Desk.Material == "Rosewood")
+            else if (material == "Rosewood")
                 materials = 300;
-            else if (Desk.Material == "Veneer")
+            else if (material == "Veneer")
                 materials = 125;
             
             // Orders
