@@ -1,7 +1,8 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /* Marbust Sites MBTC® Template 4 */
 /*Powerby Marbust Framework CSS 4.0*/
 @import url("marbust-framework.css");
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
 body {
   font-family: "Roboto", sans-serif;
   background: #f7f6ff;
@@ -164,11 +165,46 @@ header ul li a:hover i {
 
 main {
   margin-top: 50px;
+  padding: 10px;
 }
 @media (max-width: 1000px) {
   main {
     margin-top: 100px;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oxanium";
+  text-align: center;
+  margin: 10px 0px;
+}
+
+a {
+  color: #0090C1;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #022F40;
+}
+
+footer {
+  padding: 20px 10px;
+  background: #38AECC;
+}
+footer p {
+  text-align: center;
+  color: #183446;
+  font-weight: bold;
+}
+footer p a {
+  color: white;
+  transition: 1s;
+  text-decoration: none;
+}
+footer p a:hover {
+  color: #046E8F;
 }
 
 /*# sourceMappingURL=site.css.map */

@@ -3,4 +3,23 @@ main {
     @media (max-width: 1000px) {
         margin-top: 100px;
     }
+    padding: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oxanium', ;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+a {
+    color: $color3;
+    transition: 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        color: $color1;
+    }
 }

@@ -1,0 +1,17 @@
+footer {
+    padding: 20px 10px;
+    background: $color2;
+    p {
+        text-align: center;
+        color: $color4;
+        font-weight: bold;
+        a {
+            color: white;
+            transition: 1s;
+            text-decoration: none;
+            &:hover {
+                color: $color5;
+            }
+        }
+    }
+}
