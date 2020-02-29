@@ -19,17 +19,17 @@
             <div class="form-group">
                 <label asp-for="Desk.Name" class="control-label"></label>
                 <input asp-for="Desk.Name" class="form-control" />
-                <span asp-validation-for="Desk.Name" class="text-danger"></span>
+                <span asp-validation-for="Desk.Name" class="mt5px"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Width" class="control-label"></label>
-                <input asp-for="Desk.Width" class="form-control" />
-                <span asp-validation-for="Desk.Width" class="text-danger"></span>
+                <input asp-for="Desk.Width" class="form-control" /><br />
+                <span asp-validation-for="Desk.Width" class="mt5px"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Depth" class="control-label"></label>
-                <input asp-for="Desk.Depth" class="form-control" />
-                <span asp-validation-for="Desk.Depth"  class="text-danger"></span>
+                <input asp-for="Desk.Depth" class="form-control" /><br/>
+                <span asp-validation-for="Desk.Depth"  class="mt5px"></span>
             </div>
 
 
@@ -49,8 +49,8 @@
                     </div>
 
                     <div class="option">
-                        <input asp-for="Desk.Material" type="radio" class="radio" value="Oak" name="material" />
                         <label type="radio" asp-for="Desk.Material" class="control-label"><img src="~/images/oak.jpg" />Oak</label>
+                        <input asp-for="Desk.Material" type="radio" class="radio" value="Oak" name="material" />
                         <span asp-validation-for="Desk.Material" class="text-danger"></span>
                     </div>
 
@@ -99,8 +99,8 @@
             <!--</div>-->
             <div class="form-group">
                 <label asp-for="Desk.Drawers" class="control-label"></label>
-                <input asp-for="Desk.Drawers" class="form-control" />
-                <span asp-validation-for="Desk.Drawers"  class="text-danger"></span>
+                <input asp-for="Desk.Drawers" class="form-control" /><br />
+                <span asp-validation-for="Desk.Drawers"  class="mt5px"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Desk.Order" class="control-label"></label>
