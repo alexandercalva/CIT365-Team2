@@ -5,7 +5,7 @@
 }
 
 <h1>Quotes</h1>
-<div>
+<div class="tac">
     <p>Can't find Desk Quote? Create new Quote</p>
     <p><a asp-page="/Desks/Create">Add New Quote</a></p>
 </div>
@@ -16,7 +16,7 @@
         <input type="text" name="searchName" value="@Model.SearchName" />
     </div>
     <div>
-        <button type="submit">Search</button>
+        <button type="submit" class="btn">Search</button>
         <a asp-page="/Desks/View">All Quotes</a>
     </div>
 </form>
