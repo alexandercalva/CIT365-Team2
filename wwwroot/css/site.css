@@ -256,6 +256,7 @@ footer p a:hover {
 
 form {
   text-align: center;
+  padding: 10px 0px;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -264,11 +265,15 @@ form {
 form .form-group {
   margin: 10px 0px;
 }
+form .form-group span {
+  font-weight: bold;
+}
 form input, form select {
   font-size: 18px;
   min-width: 240px;
   border-radius: 5px;
   border: 1px solid #022F40;
+  margin-bottom: 15px;
 }
 form .btn {
   padding: 15px;
@@ -282,6 +287,93 @@ form .btn {
 form .btn:hover {
   background: #38AECC;
   border: 1px solid #38AECC;
+}
+
+.table-container {
+  overflow-x: hidden;
+  max-height: 500px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+@media (max-width: 1141px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+}
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.table-container table * {
+  box-sizing: border-box;
+}
+.table-container table td,
+.table-container table th {
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+.table-container table td:nth-child(1),
+.table-container table th:nth-child(1) {
+  max-width: 150px;
+  min-width: 150px;
+  width: 150px;
+}
+.table-container table td:nth-child(2),
+.table-container table td:nth-child(3),
+.table-container table th:nth-child(2),
+.table-container table th:nth-child(3) {
+  max-width: 80px;
+  min-width: 80px;
+  width: 80px;
+}
+.table-container table td:nth-child(4),
+.table-container table td:nth-child(5),
+.table-container table td:nth-child(6),
+.table-container table td:nth-child(7),
+.table-container table th:nth-child(4),
+.table-container table th:nth-child(5),
+.table-container table th:nth-child(6),
+.table-container table th:nth-child(7),
+.table-container table th:nth-child(8) {
+  max-width: 120px;
+  min-width: 120px;
+  width: 120px;
+}
+.table-container table th:nth-child(9) {
+  min-width: 200px;
+}
+.table-container table thead tr {
+  background: #022F40;
+  color: white;
+}
+
+.details-page {
+  text-align: center;
+  padding: 20px 0px;
+  width: 90%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.details-page dt {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.17);
+}
+.details-page dt:nth-child(1) {
+  border-top: 1px solid #022F40;
+  border-radius: 15px 15px 0px 0px;
+}
+.details-page dd:nth-last-child(1) {
+  border-radius: 0px 0px 15px 15px;
+}
+.details-page dt, .details-page dd {
+  padding: 10px;
+  border-bottom: 1px solid #022F40;
+  border-left: 1px solid #022F40;
+  border-right: 1px solid #022F40;
 }
 
 /*# sourceMappingURL=site.css.map */

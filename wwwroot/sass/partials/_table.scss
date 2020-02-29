@@ -1,0 +1,70 @@
+.table-container {
+
+    overflow-x: hidden;
+    max-height: 500px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    @media (max-width: 1141px) {
+        overflow-x: scroll;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px 15px;
+
+        }
+
+        td:nth-child(1),
+        th:nth-child(1) {
+            max-width: 150px;
+            min-width: 150px;
+            width: 150px;
+        }
+
+        td:nth-child(2),
+        td:nth-child(3),
+        th:nth-child(2),
+        th:nth-child(3) {
+            max-width: 80px;
+            min-width: 80px;
+            width: 80px;
+        }
+
+        td:nth-child(4),
+        td:nth-child(5),
+        td:nth-child(6),
+        td:nth-child(7),
+        th:nth-child(4),
+        th:nth-child(5),
+        th:nth-child(6),
+        th:nth-child(7),
+        th:nth-child(8) {
+            max-width: 120px;
+            min-width: 120px;
+            width: 120px;
+        }
+        th:nth-child(9) {
+            min-width: 200px;
+        }
+
+        thead {
+            tr {
+                background: $color1;
+                color: white;
+            }
+        }
+    }
+
+}
