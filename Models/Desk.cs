@@ -9,7 +9,7 @@ namespace MegaDesk_RazorPages.Models
     public class Desk
     {
         public int ID { get; set; }
-        [RegularExpression(@"^[A-Z]+[a-z-A-Z""'\S-]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         public string Name { get; set; }
        
         [Range (24, 96)]
