@@ -12,11 +12,15 @@ h2 {
   margin: 16px;
 }
 
-.container {
-  margin-top: 100px;
-  padding: 32px;
-}
+.container-material {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: space-between;
+   
 
+}
+   
 .select-box {
   display: flex;
   width: 100%;
@@ -97,7 +101,7 @@ h2 {
 }
 
 .select-box .option .radio {
-  display: none;
+  display: flex;
 }
 
 header {
