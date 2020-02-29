@@ -55,49 +55,43 @@ namespace MegaDesk_RazorPages
             var orderRush = 0;
             var basePrice = 200;
             // Calculate
-            var widthNumber = int.Parse(Request.Form["width"]);
-            Desk.Width = widthNumber;
-            var depthNumber = int.Parse(Request.Form["depth"]);
-            Desk.Depth = depthNumber;
-            var area = widthNumber * depthNumber; // $1 per in2
-            var drawersNumber = int.Parse(Request.Form["drawers"]);
-            Desk.Drawers = drawersNumber;
-            var drawers = drawersNumber * 50;
-            var material = Request.Form["material"];
-            Desk.Material = material;
-            var order = int.Parse(Request.Form["order"]);
-            Desk.Order = order;
-            if (material == "Laminate")
+            var area = Desk.Width * Desk.Depth; // $1 per in2
+            var drawers = Desk.Drawers * 50;
+            //var material = Request.Form["material"];
+            // Desk.Material = material;
+
+            // Materials
+            if (Desk.Material == "Laminate")
                 materials = 100;
-            else if (material == "Oak")
+            else if (Desk.Material == "Oak")
                 materials = 200;
-            else if (material == "Pine")
+            else if (Desk.Material == "Pine")
                 materials = 50;
-            else if (material == "Rosewood")
+            else if (Desk.Material == "Rosewood")
                 materials = 300;
-            else if (material == "Veneer")
+            else if (Desk.Material == "Veneer")
                 materials = 125;
 
-            if (order == 3 && area < 1000)
+            // Orders
+            if (Desk.Order == 3 && area < 1000)
                 orderRush = 60;
-
-            else if (order == 5 && area < 1000)
+            else if (Desk.Order == 5 && area < 1000)
                 orderRush = 40;
-            else if (order == 7 && area < 1000)
+            else if (Desk.Order == 7 && area < 1000)
                 orderRush = 30;
 
-            if (order == 3 && (area >= 1000 && area <= 2000))
+            if (Desk.Order == 3 && (area >= 1000 && area <= 2000))
                 orderRush = 70;
-            else if (order == 5 && (area >= 1000 && area <= 2000))
+            else if (Desk.Order == 5 && (area >= 1000 && area <= 2000))
                 orderRush = 50;
-            else if (order == 7 && (area >= 1000 && area <= 2000))
+            else if (Desk.Order == 7 && (area >= 1000 && area <= 2000))
                 orderRush = 35;
 
-            if (order == 3 && area > 2000)
+            if (Desk.Order == 3 && area > 2000)
                 orderRush = 80;
-            else if (order == 5 && area > 2000)
+            else if (Desk.Order == 5 && area > 2000)
                 orderRush = 60;
-            else if (order == 7 && area > 2000)
+            else if (Desk.Order == 7 && area > 2000)
                 orderRush = 40;
 
             Desk.Price = basePrice + area + drawers + materials + orderRush;
