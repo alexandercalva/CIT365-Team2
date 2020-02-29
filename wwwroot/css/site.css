@@ -103,6 +103,7 @@ h2 {
 header {
   position: fixed;
   width: 100%;
+  max-width: 1400px;
   max-height: 50px;
   min-height: 50px;
   background: #022F40;
@@ -231,6 +232,7 @@ footer {
   width: 100%;
   min-height: 58px;
   max-height: 58px;
+  max-width: 1400px;
   box-sizing: border-box;
   position: fixed;
   bottom: 0;
