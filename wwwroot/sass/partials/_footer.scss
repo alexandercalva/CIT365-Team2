@@ -1,5 +1,12 @@
 footer {
+    width: 100%;
+    min-height: 58px;
+    max-height: 58px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
     padding: 20px 10px;
+    z-index: 3;
     background: $color2;
     p {
         text-align: center;

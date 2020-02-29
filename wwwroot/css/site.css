@@ -19,7 +19,10 @@ h2 {
 
 .select-box {
   display: flex;
-  width: 400px;
+  width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
 }
 
@@ -165,6 +168,7 @@ header ul li a:hover i {
 
 main {
   margin-top: 50px;
+  margin-bottom: 58px;
   padding: 10px;
 }
 @media (max-width: 1000px) {
@@ -189,8 +193,49 @@ a:hover {
   color: #022F40;
 }
 
+.home-slide {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
+  width: 80%;
+}
+
+.home-options a {
+  display: block;
+  max-height: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  margin: 5px;
+  min-height: 100px;
+  max-width: 100px;
+  min-width: 100px;
+  width: 100px;
+  transition: 0.3s;
+  border-radius: 15px;
+  background: #046E8F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-options a i {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.home-options a:hover {
+  background: #38AECC;
+}
+
 footer {
+  width: 100%;
+  min-height: 58px;
+  max-height: 58px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
   padding: 20px 10px;
+  z-index: 3;
   background: #38AECC;
 }
 footer p {
@@ -205,6 +250,36 @@ footer p a {
 }
 footer p a:hover {
   color: #046E8F;
+}
+
+form {
+  text-align: center;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+form .form-group {
+  margin: 10px 0px;
+}
+form input, form select {
+  font-size: 18px;
+  min-width: 240px;
+  border-radius: 5px;
+  border: 1px solid #022F40;
+}
+form .btn {
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+  background: #0090C1;
+  border: 1px solid #0090C1;
+  transition: 1s;
+}
+form .btn:hover {
+  background: #38AECC;
+  border: 1px solid #38AECC;
 }
 
 /*# sourceMappingURL=site.css.map */
