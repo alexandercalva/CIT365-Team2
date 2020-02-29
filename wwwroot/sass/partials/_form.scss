@@ -30,6 +30,7 @@ form {
         &:hover {
             background: $color2;
             border: 1px solid $color2;
+            cursor: pointer;
         }
     }
 }
