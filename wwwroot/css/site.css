@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* Marbust Sites MBTC® Template 4 */
 /*Powerby Marbust Framework CSS 4.0*/
 @import url("marbust-framework.css");
@@ -49,7 +49,7 @@ h2 {
 
 .selected::after {
   content: "";
-  background: url("img/arrow-down.svg");
+  
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;

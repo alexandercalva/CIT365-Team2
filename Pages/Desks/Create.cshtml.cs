@@ -49,19 +49,19 @@ namespace MegaDesk_RazorPages
             // Calculate
             var area = Desk.Width * Desk.Depth; // $1 per in2
             var drawers = Desk.Drawers * 50;
-            var material = Request.Form["material"];
-           Desk.Material = material;
+            //var material = Request.Form["material"];
+            //Desk.Material = material;
            
             // Materials
-            if (material == "Laminate")
+            if (Desk.Material == "Laminate")
                 materials = 100;
-            else if (material == "Oak")
+            else if (Desk.Material == "Oak")
                 materials = 200;
-            else if (material == "Pine")
+            else if (Desk.Material == "Pine")
                 materials = 50;
-            else if (material == "Rosewood")
+            else if (Desk.Material == "Rosewood")
                 materials = 300;
-            else if (material == "Veneer")
+            else if (Desk.Material == "Veneer")
                 materials = 125;
             
             // Orders
