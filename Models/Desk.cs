@@ -10,6 +10,7 @@ namespace MegaDesk_RazorPages.Models
     {
         public int ID { get; set; }
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [Required(ErrorMessage = "Please enter name")]
         public string Name { get; set; }
        
         [Range (24, 96)]
