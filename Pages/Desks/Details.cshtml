@@ -10,7 +10,7 @@
 <div>
     <h4>Desk</h4>
     <hr />
-    <dl class="row">
+    <dl class="details-page">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Desk.Name)
         </dt>
@@ -61,7 +61,7 @@
         </dd>
     </dl>
 </div>
-<div>
+<div class="tac">
     <a asp-page="./Edit" asp-route-id="@Model.Desk.ID">Edit</a> |
     <a asp-page="./View">Back to List</a>
 </div>
